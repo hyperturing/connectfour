@@ -1,4 +1,5 @@
-require './player.rb'
+require './lib/player.rb'
+require './lib/IoTestHelpers.rb'
 
 RSpec.describe Player do
   it 'Player1 initializes with a name' do
@@ -28,7 +29,7 @@ RSpec.describe Player do
   describe '#move' do
     it 'gets the move position and piece symbol from the player' do
       player1 = Player.new(name: 'Ashley', symbol: 'X')
-      expect(player1.get_move).to_match([pos: /[0-3]/, symbol: /[XO]/])
+      expect(IoTestHelpers.simulate_stdin('2') { player1.move }).to eql([2, 'X'])
     end
   end
 end
