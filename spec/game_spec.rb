@@ -1,6 +1,6 @@
-require './board.rb'
-require './player.rb'
-require './game.rb'
+require './lib/board.rb'
+require './lib/player.rb'
+require './lib/game.rb'
 
 RSpec.describe Game do
   it 'creates a game board' do
