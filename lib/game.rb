@@ -36,6 +36,7 @@ class Game
     @current_player = @board.current_player
     user_input = @players[@board.current_player].move
     until @board.valid_move?(user_input[0])
+      puts 'Invalid move'
       user_input = @players[@board.current_player].move
     end
     @board.place_piece(position: user_input[0], symbol: user_input[1])

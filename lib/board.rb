@@ -55,9 +55,9 @@ class Board
   def icon(value)
     case value
     when 1
-      ' X '
+      ' ⚧ '
     when -1
-      ' O '
+      ' ♫ '
     when 0
       '   '
     end
