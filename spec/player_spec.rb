@@ -29,7 +29,7 @@ RSpec.describe Player do
   describe '#move' do
     it 'gets the move position and piece symbol from the player' do
       player1 = Player.new(name: 'Ashley', symbol: 'X')
-      expect(IoTestHelpers.simulate_stdin('2') { player1.move }).to eql([2, 'X'])
+      expect(IoTestHelpers.simulate_stdin('2') { player1.move }).to eql([1, 'X'])
     end
   end
 end

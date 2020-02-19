@@ -8,10 +8,10 @@ class Player
 
   def move
     move = -1
-    until move >= 0 && move < 4
-      puts 'Enter your move:'
+    until move.positive? && move <= 4
+      puts "\n\n#{name}, please enter your move:"
       move = gets.chomp.to_i
     end
-    [move, symbol]
+    [move - 1, symbol]
   end
 end
