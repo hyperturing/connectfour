@@ -11,7 +11,7 @@ class Game
   end
 
   def instructions
-    puts 'Welcome to Connect-Four!!'
+    puts "Welcome to Connect-Four!!\n\n"
     puts 'Instructions:'
     puts '========================'
     puts 'To make a move when prompted:'
@@ -26,7 +26,7 @@ class Game
 
     if won?
       winner == 'X' || winner == 'O'
-      puts "Congratulations #{@players[winner].name}!"
+      puts "\nCongratulations #{@players[winner].name}! You won!!\n\n"
     elsif draw?
       puts 'Cats Game!'
     end

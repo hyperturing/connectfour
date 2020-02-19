@@ -44,6 +44,7 @@ class Board
   end
 
   def display_board
+    puts "\n=======The Board========="
     rotated = @board.transpose.map(&:reverse).transpose.map(&:reverse).transpose.map(&:reverse)
     output = rotated.map { |row| row.map { |element| icon(element) } }
     output.map { |element| puts element.join(' ') }
